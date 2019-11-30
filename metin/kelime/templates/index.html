@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% load static%}
+{% block contend %}
+<nav class="navbar navbar-dark bg-dark mb-4 printHidden " >
+    <a class="navbar-brand">KELIME AYIKLAMA</a>
+     <i> </i>
+</nav>
+<div class="jumbotron jumbotron-fluid m-3" >
+    <div class="container">
+      <h1 class="display-11">Kelime Oyunu</h1>
+      <p class="lead">Texte yazmis oldugunuz cumlelerden <b>KELIME SAYISI</b>, <b>OZGUN KELIME SAYISI </b>,
+        <b>EN COK TEKRAR EDEN KELIME </b>, bulunacak ve sonuc sayfasinda gosterilecektir.Bunun icin yapmaniz gereken
+        "islemi Baslat" tusuna basmaktir. <br>
+        iyi eglenceler........
+    
+    </p>
+</div>
+<form action="{% url 'sonuc' %}" method="POST">
+    {% csrf_token %}
+    <div class="container ">
+        <div class="row ">
+            <div class="col-md-8">
+                <textarea   name="text" id="text" cols="100" rows="10"></textarea>
+            </div>  
+        </div>
+        
+        <div class="col-md-4">
+            
+        
+            <input type="submit"  value="Islem Baslat">
+           
+
+        </div>
+    </div>
+</form>
+   
+
+{% endblock %}

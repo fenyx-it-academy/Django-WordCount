@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% load static%}
+{% block contend %}
+<nav class="navbar navbar-dark bg-dark mb-4 printHidden " >
+    <a class="navbar-brand">KELIME AYIKLAMA</a>
+    <a class="navbar-brand" href="http://127.0.0.1:8000/"> Metin Sayfasi</a>
+        
+</nav>
+
+<nav class="bg-light m-4 ">        
+    <label for="TOPLAM KELIME"><h5>&nbsp; &nbsp;TOPLAM KELIME SAYISI</h5></label> <br>
+</nav>
+<nav class="m-4  ">        
+    <label for="TOPLAM KELIME" >
+        <h6>&nbsp;&nbsp; &nbsp;{{kelime_sayisi}}</h6>
+           
+    </label> <br>
+</nav>
+<nav class="bg-warning m-4">        
+    <label for="ozgun KELIME"><h5> &nbsp; &nbsp; TOPLAM OZGUN KELIME SAYISI</h5></label> <br>
+</nav>
+<nav class="m-4">        
+        <label for="TOPLAM KELIME">
+               <h6> &nbsp;&nbsp; &nbsp;{{ozgun_sayi}}</h6>            
+
+        </label> <br>
+</nav>
+<nav class="bg-success m-4">        
+        <label for="TOPLAM KELIME"><h5>&nbsp; &nbsp;EN COK TEKRAR EDEN KELIME</h5></label> <br>
+</nav>
+<nav class="m-4">        
+        <label for="TOPLAM KELIME">
+            <h6>&nbsp;&nbsp; &nbsp;{{tekrar_kelime}}  </h6>
+
+        </label> <br>
+</nav>
+<nav class="bg-danger m-4">        
+        <label for="TOPLAM KELIME"><h5>&nbsp; &nbsp;EN COK TEKRAR EDEN KELIME SAYISI</h5></label> <br>
+</nav>
+<nav class="m-4">        
+        <label for="TOPLAM KELIME">
+            <h6>&nbsp;&nbsp; &nbsp;{{tekrar_kelime_sayisi}}  </h6> 
+
+        </label> 
+</nav>
+
+
+{% endblock %}
